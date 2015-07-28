@@ -28,7 +28,7 @@ and what you should write is the favNum function that makes the code above work,
 var first = function(arr, func){
     func(arr);
 };
-  
+
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 first(names, function(firstName){
   console.log('The first name in names is ', firstName)
@@ -42,6 +42,9 @@ first(names, function(firstName){
 
 
   //Code Here for last
+var last = function(arr, func){
+    func(arr);
+};
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 last(names, function(lastName){
