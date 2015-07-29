@@ -141,10 +141,17 @@ uniq(names, function(uniqArr){
 
 
     //Code Here for each
+var each = function(names,func){
+    var item = '';
+    var indice = 0;
+    item = names[indice];
+    
+    func(item,indice);
+};
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 each(names, function(item, indice){
-  console.log('The item in the ' + indice + ' position is ' + item)
+  console.log('The item in the ' + indice + ' position is ' + item);
 });
 
 
@@ -158,6 +165,15 @@ each(names, function(item, indice){
 
 
  //code here for getUserById
+var getUserById = function(users, str, func){
+    var user;
+    for (var u in users) {
+        if (users[u].id === str){
+            user = users[u];
+        }
+    }
+    func(user);
+};
 
 var users = [
   {
