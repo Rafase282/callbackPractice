@@ -111,6 +111,20 @@ contains(names, 'Colt', function(result){
 
 
     //Code Here for uniq
+var uniq = function(names,func){
+    var uniqArr = [];
+    names.sort();
+    console.log(names);
+    for (var n=0; n < parseInt(names.length) - 1; n++){
+        console.log(names[n], names[n+1]);
+        if (names[n] !== names[n+1] && uniqArr.indexOf(names[n]) === -1){
+            uniqArr.push(names[n]);
+        }else if (names[n] !== names[n+1] || uniqArr.indexOf(names[n]) === -1){
+            uniqArr.push(names[n+1]);
+        }
+    }
+    func(uniqArr);
+};
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 uniq(names, function(uniqArr){
